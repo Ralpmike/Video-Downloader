@@ -46,7 +46,7 @@ export default function VideoDownloader() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 border-red-300">
       <h1 className="text-3xl text-center mb-6">Video Downloader</h1>
       <div className="flex gap-4 justify-center my-4">
         {" "}
@@ -57,14 +57,14 @@ export default function VideoDownloader() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex gap-2 justify-center items-center my-3"
+        className="flex w-full gap-2  md:justify-center md:items-center my-4 flex-col md:flex-row "
       >
         <input
           type="text"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Enter video URL"
-          className=" p-2 border border-gray-300 rounded w-[600px] max-w-[100%] outline-none focus:border-blue-500"
+          className=" p-2 border w-full max-w-[600px] border-gray-300 rounded  outline-none focus:border-blue-500"
         />
         <button
           type="submit"

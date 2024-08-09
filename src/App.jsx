@@ -3,7 +3,7 @@ import VideoDownloader from "./components/VideoDowloader";
 
 function App() {
   return (
-    <div>
+    <div className="w-full">
       <h2>Simple Video Downloader</h2>
       <VideoDownloader />
     </div>
