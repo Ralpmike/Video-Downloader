@@ -48,6 +48,13 @@ export default function VideoDownloader() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl text-center mb-6">Video Downloader</h1>
+      <div className="flex gap-4 justify-center my-4">
+        {" "}
+        <img src="/instagram.svg" alt="instagram" />
+        <img src="/tiktok-icons.svg" alt="tiktok" />
+        <img src="/facebook.svg" alt="facebook" />
+        <img src="/youtube.svg" alt="youtube" />
+      </div>
       <form
         onSubmit={handleSubmit}
         className="flex gap-2 justify-center items-center my-3"
@@ -68,12 +75,6 @@ export default function VideoDownloader() {
       </form>
       {error && <p className="text-red-500 text-center mt-4">{error}</p>}
 
-      <div className="flex gap-4 justify-center my-4">
-        {" "}
-        <img src="/instagram.svg" alt="instagram" />
-        <img src="/tiktok-icons.svg" alt="tiktok" />
-        <img src="/facebook.svg" alt="facebook" />
-      </div>
       {videos && <VideoDisplayer videos={videos} url={url} />}
     </div>
   );
@@ -100,7 +101,6 @@ function VideoDisplayer({ videos, url }) {
                     download
                   >
                     {video?.quality}
-                    {/* {video?.url} */}
                   </a>
                 </div>
               );
