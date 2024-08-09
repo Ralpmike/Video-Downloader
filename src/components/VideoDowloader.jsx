@@ -40,7 +40,7 @@ export default function VideoDownloader() {
       setVideos(response.data);
     } catch (error) {
       console.error("Error fetching video data:", error);
-      setError("Failed to fetch video data");
+      setError(`${error.message}`);
       setVideos();
     }
   };
